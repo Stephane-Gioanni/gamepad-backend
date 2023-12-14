@@ -17,14 +17,6 @@ app.use(formidable());
 const userRoutes = require("./routes/user-routes");
 app.use(userRoutes);
 
-app.get("/", (req, res) => {
-  try {
-    res.json("hello");
-  } catch (error) {
-    res.status(400).json({ message: error.message });
-  }
-});
-
 app.listen(process.env.PORT || 4000, () => {
   console.log("server has started");
 });
